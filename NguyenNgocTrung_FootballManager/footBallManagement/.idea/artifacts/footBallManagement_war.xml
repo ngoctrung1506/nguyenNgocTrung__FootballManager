@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="footBallManagement:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="footBallManagement.war">
+      <element id="artifact" artifact-name="footBallManagement:war exploded" />
+    </root>
+  </artifact>
+</component>
