@@ -15,7 +15,7 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
-	<!--<resources mapping="/resources/**" location="resources/" />-->
+	<!--<resources mapping="/resources/**" location="/resources/" />-->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
@@ -41,7 +41,9 @@
 
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>DTO.TeamDTO</beans:value>
+				<beans:value>newmain.Model.Team</beans:value>
+				<beans:value>newmain.Model.Person</beans:value>
+				<beans:value>newmain.Model.League</beans:value>
 			</beans:list>
 		</beans:property>
 
@@ -53,14 +55,14 @@
 		</beans:property>
 	</beans:bean>
 	
-	<beans:bean id="teamDAO" class="Dao.Impl.TeamImpl">
+	<beans:bean id="teamDAO" class="newmain.Dao.Impl.TeamImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 
-	<beans:bean id="teamService" class="Service.impl.TeamServiceImpl">
+	<beans:bean id="teamService" class="newmain.Service.impl.TeamServiceImpl">
 		<beans:property name="teamDAO" ref="teamDAO"></beans:property>
 	</beans:bean>
-	<context:component-scan base-package="java" />
+	<context:component-scan base-package="newmain" />
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	

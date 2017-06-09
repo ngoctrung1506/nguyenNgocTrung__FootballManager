@@ -1,4 +1,4 @@
-<%--
+    xmlns:c="http://www.w3.org/1999/XSL/Transform" xmlns:c="http://www.w3.org/1999/XSL/Transform" xmlns:c="http://www.w3.org/1999/XSL/Transform" xmlns:c="http://www.w3.org/1999/XSL/Transform" xmlns:c="http://www.w3.org/1999/XSL/Transform"<%--
   Created by IntelliJ IDEA.
   User: Admin
   Date: 05/06/2017
