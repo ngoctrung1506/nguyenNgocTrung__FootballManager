@@ -1,6 +1,6 @@
 package newmain.Model;
 
-import Model.League;
+import newmain.Model.League;
 
 import javax.persistence.*;
 
@@ -35,7 +35,7 @@ public class Team {
 
     @Id
     @GeneratedValue
-    @Column(name = "")
+    @Column(name = "ID")
     public int getId() {
         return id;
     }

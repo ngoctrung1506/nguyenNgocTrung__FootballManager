@@ -1,9 +1,9 @@
 package newmain.Service.impl;
 
 
-import DTO.TeamDTO;
-import Dao.TeamDAO;
-import Service.TeamService;
+import newmain.DTO.TeamDTO;
+import newmain.Dao.TeamDAO;
+import newmain.Service.TeamService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,7 +1,6 @@
 package newmain.Model;
 
-import Model.*;
-import Model.Players;
+import newmain.Model.*;
 
 import javax.persistence.*;
 
@@ -12,8 +11,8 @@ import javax.persistence.*;
 @Table(name = "Player_match")
 public class Player_match {
     private int id;
-    private Model.Match match;
-    private Model.Players player;
+    private Match match;
+    private Players player;
     private int min_played;
     private int yellow_card;
     private int red_card;
@@ -21,7 +20,7 @@ public class Player_match {
     public Player_match() {
     }
 
-    public Player_match(int id, Model.Match match, Model.Players player, int min_played, int yellow_card, int red_card) {
+    public Player_match(int id, Match match, Players player, int min_played, int yellow_card, int red_card) {
         this.id = id;
         this.match = match;
         this.player = player;
@@ -43,16 +42,16 @@ public class Player_match {
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Match getMatch() {
+    public Match getMatch() {
         return match;
     }
 
-    public void setMatch(Model.Match match) {
+    public void setMatch(Match match) {
         this.match = match;
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Players getPlayer() {
+    public Players getPlayer() {
         return player;
     }
 

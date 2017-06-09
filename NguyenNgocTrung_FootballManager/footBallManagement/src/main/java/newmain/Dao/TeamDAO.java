@@ -1,7 +1,6 @@
 package newmain.Dao;
 
-import DTO.TeamDTO;
-import Model.Team;
+import newmain.DTO.TeamDTO;
 
 import java.util.List;
 

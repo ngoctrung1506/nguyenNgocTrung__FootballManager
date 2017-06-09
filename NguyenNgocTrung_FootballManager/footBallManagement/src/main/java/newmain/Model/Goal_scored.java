@@ -1,7 +1,6 @@
 package newmain.Model;
 
-import Model.*;
-import Model.Match;
+import newmain.Model.*;
 
 import javax.persistence.*;
 
@@ -13,13 +12,13 @@ import javax.persistence.*;
 public class Goal_scored {
     private int id;
     private int time;
-    private Model.Players player;
-    private Model.Match match;
+    private Players player;
+    private Match match;
 
     public Goal_scored() {
     }
 
-    public Goal_scored(int id, int time, Model.Players player, Model.Match match) {
+    public Goal_scored(int id, int time, Players player, Match match) {
         this.id = id;
         this.time = time;
         this.player = player;
@@ -47,16 +46,16 @@ public class Goal_scored {
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Players getPlayer() {
+    public Players getPlayer() {
         return player;
     }
 
-    public void setPlayer(Model.Players player) {
+    public void setPlayer(Players player) {
         this.player = player;
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Match getMatch() {
+    public Match getMatch() {
         return match;
     }
 

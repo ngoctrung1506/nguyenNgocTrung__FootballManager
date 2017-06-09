@@ -1,6 +1,7 @@
 package newmain.Service;
 
-import DTO.TeamDTO;
+import newmain.DTO.TeamDTO;
+import newmain.DTO.TeamDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

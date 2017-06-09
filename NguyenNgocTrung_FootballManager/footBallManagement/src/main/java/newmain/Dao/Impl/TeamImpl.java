@@ -1,8 +1,8 @@
 package newmain.Dao.Impl;
 
-import DTO.TeamDTO;
-import Dao.TeamDAO;
-import Model.Team;
+import newmain.DTO.TeamDTO;
+import newmain.Dao.TeamDAO;
+import newmain.Model.Team;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

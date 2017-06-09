@@ -1,7 +1,7 @@
 package newmain.Controller;
 
-import DTO.TeamDTO;
-import Service.TeamService;
+import newmain.DTO.TeamDTO;
+import newmain.Service.TeamService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;

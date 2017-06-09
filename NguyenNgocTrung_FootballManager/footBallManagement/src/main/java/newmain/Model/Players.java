@@ -1,6 +1,6 @@
 package newmain.Model;
 
-import Model.*;
+import newmain.Model.*;
 
 import javax.persistence.*;
 
@@ -16,12 +16,12 @@ public class Players {
     private int goal;
     private String photo;
     private int age;
-    private Model.Team team;
+    private Team team;
 
     public Players() {
     }
 
-    public Players(int id, String name, String position, int goal, String photo, int age, Model.Team team) {
+    public Players(int id, String name, String position, int goal, String photo, int age, Team team) {
         this.id = id;
         this.name = name;
         this.position = position;
@@ -88,11 +88,11 @@ public class Players {
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Team getTeam() {
+    public Team getTeam() {
         return team;
     }
 
-    public void setTeam(Model.Team team) {
+    public void setTeam(Team team) {
         this.team = team;
     }
 }

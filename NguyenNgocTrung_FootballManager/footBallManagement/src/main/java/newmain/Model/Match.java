@@ -1,6 +1,6 @@
 package newmain.Model;
 
-import Model.*;
+import newmain.Model.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,13 +15,13 @@ public class Match {
     private int team1_score;
     private int team2_score;
     private Date date;
-    Model.Team team1;
-    Model.Team team2;
+    Team team1;
+    Team team2;
 
     public Match() {
     }
 
-    public Match(int id, int team1_score, int team2_score, Date date, Model.Team team1, Model.Team team2) {
+    public Match(int id, int team1_score, int team2_score, Date date, Team team1, Team team2) {
         this.id = id;
         this.team1_score = team1_score;
         this.team2_score = team2_score;
@@ -69,20 +69,20 @@ public class Match {
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Team getTeam1() {
+    public Team getTeam1() {
         return team1;
     }
 
-    public void setTeam1(Model.Team team1) {
+    public void setTeam1(Team team1) {
         this.team1 = team1;
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Model.Team getTeam2() {
+    public Team getTeam2() {
         return team2;
     }
 
-    public void setTeam2(Model.Team team2) {
+    public void setTeam2(Team team2) {
         this.team2 = team2;
     }
 }

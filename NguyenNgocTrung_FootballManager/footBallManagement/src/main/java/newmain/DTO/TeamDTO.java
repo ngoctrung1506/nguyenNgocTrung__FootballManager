@@ -1,7 +1,7 @@
 package newmain.DTO;
 
-import DTO.LeagueDTO;
-import Model.Team;
+import newmain.DTO.LeagueDTO;
+import newmain.Model.Team;
 
 /**
  * Created by Admin on 02/06/2017.
