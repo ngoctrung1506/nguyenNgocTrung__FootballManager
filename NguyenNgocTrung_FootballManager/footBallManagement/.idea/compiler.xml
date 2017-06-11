@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="footBallManagement" />
-        <module name="NguyenNgocTrung_footBallManagement" />
+        <module name="NguyenNgocTrung__FootballManagement" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="footBallManagement" target="1.8" />
-      <module name="NguyenNgocTrung_footBallManagement" target="1.6" />
+      <module name="NguyenNgocTrung__FootballManagement" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

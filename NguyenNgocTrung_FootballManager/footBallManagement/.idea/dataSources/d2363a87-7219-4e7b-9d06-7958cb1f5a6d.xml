@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="FootballDatabase@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="FootballDatabase">
+      <ObjectId>16770</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-06-12.00:28:11.768</IntrospectionTimestamp>
+      <IntrospectionStateNumber>958</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="player_id_seq">
+      <ObjectId>16839</ObjectId>
+      <StateNumber>889</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="leage_id_seq">
+      <ObjectId>16778</ObjectId>
+      <StateNumber>835</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="match_fixture_id_seq">
+      <ObjectId>16786</ObjectId>
+      <StateNumber>838</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="match_id_seq">
+      <ObjectId>16836</ObjectId>
+      <StateNumber>886</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="team_id_seq">
+      <ObjectId>16825</ObjectId>
+      <StateNumber>869</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="3" name="team_id_seq1">
+      <ObjectId>16829</ObjectId>
+      <StateNumber>875</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="3" name="team_id_seqa">
+      <ObjectId>16832</ObjectId>
+      <StateNumber>880</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="3" name="team_team_id_seq">
+      <ObjectId>16809</ObjectId>
+      <StateNumber>850</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="17" parent="3" name="goal_scrored">
+      <ObjectId>16771</ObjectId>
+      <StateNumber>831</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <table id="18" parent="3" name="league">
+      <ObjectId>16780</ObjectId>
+      <StateNumber>855</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <table id="19" parent="3" name="match">
+      <ObjectId>16788</ObjectId>
+      <StateNumber>838</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <table id="20" parent="3" name="player">
+      <ObjectId>16803</ObjectId>
+      <StateNumber>857</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <table id="21" parent="3" name="player_match">
+      <ObjectId>16796</ObjectId>
+      <StateNumber>843</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <table id="22" parent="3" name="team">
+      <ObjectId>16811</ObjectId>
+      <StateNumber>958</StateNumber>
+      <WithOids>1</WithOids>
+    </table>
+    <column id="23" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>831</StateNumber>
+    </column>
+    <column id="24" parent="17" name="time">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>831</StateNumber>
+    </column>
+    <column id="25" parent="17" name="player_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>831</StateNumber>
+    </column>
+    <column id="26" parent="17" name="match_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>859</StateNumber>
+    </column>
+    <index id="27" parent="17" name="goal_scrored_pkey">
+      <ObjectId>16774</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="28" parent="17" name="goal_scrored_player_id_idx">
+      <ObjectId>16776</ObjectId>
+      <ColNames>player_id</ColNames>
+    </index>
+    <index id="29" parent="17" name="goal_scrored_fixture_id_idx">
+      <ObjectId>16777</ObjectId>
+      <ColNames>match_id</ColNames>
+    </index>
+    <key id="30" parent="17" name="goal_scrored_pkey">
+      <ObjectId>16775</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>goal_scrored_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>835</StateNumber>
+      <SequenceName>leage_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;leage_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="32" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>835</StateNumber>
+    </column>
+    <column id="33" parent="18" name="logo">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>835</StateNumber>
+    </column>
+    <column id="34" parent="18" name="prize">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>835</StateNumber>
+    </column>
+    <index id="35" parent="18" name="leage_pkey">
+      <ObjectId>16784</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="18" name="leage_pkey">
+      <ObjectId>16785</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>leage_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>887</StateNumber>
+      <SequenceName>match_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;match_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="38" parent="19" name="team1_score">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>838</StateNumber>
+    </column>
+    <column id="39" parent="19" name="team2_score">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>838</StateNumber>
+    </column>
+    <column id="40" parent="19" name="date">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>858</StateNumber>
+    </column>
+    <column id="41" parent="19" name="team1_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>838</StateNumber>
+    </column>
+    <column id="42" parent="19" name="team2_id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>838</StateNumber>
+    </column>
+    <index id="43" parent="19" name="match_pkey">
+      <ObjectId>16792</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="19" name="match_team1_id_idx">
+      <ObjectId>16794</ObjectId>
+      <ColNames>team1_id</ColNames>
+    </index>
+    <index id="45" parent="19" name="match_team2_id_idx">
+      <ObjectId>16795</ObjectId>
+      <ColNames>team2_id</ColNames>
+    </index>
+    <key id="46" parent="19" name="match_pkey">
+      <ObjectId>16793</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>match_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>890</StateNumber>
+      <SequenceName>player_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;player_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="48" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>847</StateNumber>
+    </column>
+    <column id="49" parent="20" name="position">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>847</StateNumber>
+    </column>
+    <column id="50" parent="20" name="goal">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>847</StateNumber>
+    </column>
+    <column id="51" parent="20" name="photo">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>847</StateNumber>
+    </column>
+    <column id="52" parent="20" name="age">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>847</StateNumber>
+    </column>
+    <column id="53" parent="20" name="team_id">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>847</StateNumber>
+    </column>
+    <index id="54" parent="20" name="players_pkey">
+      <ObjectId>16806</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="20" name="players_team_id_idx">
+      <ObjectId>16808</ObjectId>
+      <ColNames>team_id</ColNames>
+    </index>
+    <key id="56" parent="20" name="players_pkey">
+      <ObjectId>16807</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>players_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="21" name="min_played">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>843</StateNumber>
+    </column>
+    <column id="58" parent="21" name="yellow_card">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>843</StateNumber>
+    </column>
+    <column id="59" parent="21" name="red_card">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>843</StateNumber>
+    </column>
+    <column id="60" parent="21" name="match_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>843</StateNumber>
+    </column>
+    <column id="61" parent="21" name="player_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>843</StateNumber>
+    </column>
+    <column id="62" parent="21" name="id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>843</StateNumber>
+    </column>
+    <index id="63" parent="21" name="player_match_pkey">
+      <ObjectId>16799</ObjectId>
+      <ColNames>min_played
+id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="64" parent="21" name="player_match_match_id_idx">
+      <ObjectId>16802</ObjectId>
+      <ColNames>match_id</ColNames>
+    </index>
+    <index id="65" parent="21" name="player_match_player_id_idx">
+      <ObjectId>16801</ObjectId>
+      <ColNames>player_id</ColNames>
+    </index>
+    <key id="66" parent="21" name="player_match_pkey">
+      <ObjectId>16800</ObjectId>
+      <ColNames>min_played
+id</ColNames>
+      <UnderlyingIndexName>player_match_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="22" name="name">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>878</StateNumber>
+    </column>
+    <column id="68" parent="22" name="numberofwin">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>864</StateNumber>
+    </column>
+    <column id="69" parent="22" name="numberoflost">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>863</StateNumber>
+    </column>
+    <column id="70" parent="22" name="numberofdraw">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>862</StateNumber>
+    </column>
+    <column id="71" parent="22" name="score">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>850</StateNumber>
+    </column>
+    <column id="72" parent="22" name="logo">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>850</StateNumber>
+    </column>
+    <column id="73" parent="22" name="id">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <SequenceName>team_id_seqa</SequenceName>
+      <DefaultExpression>nextval(&apos;team_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="74" parent="22" name="leage_id">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>958</StateNumber>
+    </column>
+    <index id="75" parent="22" name="team_pkey">
+      <ObjectId>16815</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="22" name="team_leage_id_idx">
+      <ObjectId>16870</ObjectId>
+      <ColNames>leage_id</ColNames>
+    </index>
+    <key id="77" parent="22" name="team_pkey">
+      <ObjectId>16816</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>team_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

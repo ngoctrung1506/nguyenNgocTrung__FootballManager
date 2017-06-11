@@ -1,18 +1,19 @@
 package newmain.Service;
 
 import newmain.DTO.TeamDTO;
-import newmain.DTO.TeamDTO;
-import org.springframework.stereotype.Service;
+import newmain.Model.Team;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
- * Created by Admin on 02/06/2017.
+ * Created by Admin on 10/06/2017.
  */
-@Service
-public interface TeamService
-{
-    public TeamDTO getTeamById(int id);
-
-    public List<TeamDTO> findAll();
+public interface TeamService {
+     TeamDTO getTeamById(int id);
+     List<TeamDTO> findAll();
+     List<TeamDTO> findAllTeambyLeagueId(int id);
+     void updateTeam(Team team);
+     void removeTeam(int id);
+     void addTeam(Team p);
 }

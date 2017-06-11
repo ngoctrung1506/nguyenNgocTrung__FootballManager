@@ -1,17 +1,12 @@
 package newmain.Model;
 
-import org.hibernate.annotations.Table;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Admin on 02/06/2017.
  */
 @Entity
-@javax.persistence.Table(name = "league")
+@Table(name = "league")
 public class League {
     private int id;
     private String  name;
@@ -29,8 +24,8 @@ public class League {
     }
 
     @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -39,7 +34,7 @@ public class League {
         this.id = id;
     }
 
-    @Column(name = "NAME")
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -48,7 +43,7 @@ public class League {
         this.name = name;
     }
 
-    @Column(name = "LOGO")
+    @Column(name = "logo")
     public String getLogo() {
         return logo;
     }
@@ -57,7 +52,7 @@ public class League {
         this.logo = logo;
     }
 
-    @Column(name = "PRIZE")
+    @Column(name = "prize")
     public int getPrize() {
         return prize;
     }

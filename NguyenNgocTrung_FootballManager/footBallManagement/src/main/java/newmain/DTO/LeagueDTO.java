@@ -1,10 +1,11 @@
 package newmain.DTO;
 
+import newmain.Model.League;
+
 /**
  * Created by Admin on 02/06/2017.
  */
 public class LeagueDTO {
-
 
         private int id;
         private String  name;
@@ -14,11 +15,11 @@ public class LeagueDTO {
         public LeagueDTO() {
         }
 
-        public LeagueDTO(int id, String name, String logo, int prize) {
-            this.id = id;
-            this.name = name;
-            this.logo = logo;
-            this.prize = prize;
+        public LeagueDTO(League league) {
+            this.id = league.getId();
+            this.name = league.getName();
+            this.logo = league.getLogo();
+            this.prize = league.getPrize();
         }
 
 
@@ -53,6 +54,8 @@ public class LeagueDTO {
         public void setPrize(int prize) {
             this.prize = prize;
         }
+
+        
     }
 
 

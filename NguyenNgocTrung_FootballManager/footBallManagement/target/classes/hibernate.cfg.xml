@@ -13,7 +13,7 @@
         <property name="hbm2ddl.auto">create</property>
         <mapping class="newmain.Model.Team" />
         <mapping class="newmain.Model.League" />
-        <mapping class="newmain.Model.Players" />
+        <mapping class="newmain.Model.Player" />
         <mapping class="newmain.Model.Match" />
         <mapping class="newmain.Model.Goal_scored" />
         <mapping class="newmain.Model.Player_match" />

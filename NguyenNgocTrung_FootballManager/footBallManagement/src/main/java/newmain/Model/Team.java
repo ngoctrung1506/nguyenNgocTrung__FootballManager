@@ -1,14 +1,12 @@
 package newmain.Model;
 
-import newmain.Model.League;
-
 import javax.persistence.*;
 
 /**
  * Created by Admin on 02/06/2017.
  */
 @Entity
-@Table(name = "TEAM")
+@Table(name = "team")
 public class Team {
     private int id;
     private String name;
@@ -34,8 +32,8 @@ public class Team {
     }
 
     @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -44,7 +42,7 @@ public class Team {
         this.id = id;
     }
 
-    @Column(name = "NAME")
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -53,7 +51,7 @@ public class Team {
         this.name = name;
     }
 
-    @Column(name = "NUMBEROFWIN")
+    @Column(name = "numberofwin")
     public int getNumberOfWin() {
         return numberOfWin;
     }
@@ -62,7 +60,7 @@ public class Team {
         this.numberOfWin = numberOfWin;
     }
 
-    @Column(name = "NUMBEROFLOST")
+    @Column(name = "numberoflost")
     public int getNumberOfLost() {
         return numberOfLost;
     }
@@ -71,7 +69,7 @@ public class Team {
         this.numberOfLost = numberOfLost;
     }
 
-    @Column(name = "NUMBEROFDRAW")
+    @Column(name = "numberofdraw")
     public int getNumberOfDraw() {
         return numberOfDraw;
     }
@@ -80,7 +78,7 @@ public class Team {
         this.numberOfDraw = numberOfDraw;
     }
 
-    @Column(name = "SCORE")
+    @Column(name = "score")
     public int getScore() {
         return score;
     }
@@ -89,7 +87,7 @@ public class Team {
         this.score = score;
     }
 
-    @Column(name = "LOGO")
+    @Column(name = "logo")
     public String getLogo() {
         return logo;
     }
@@ -99,6 +97,7 @@ public class Team {
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "leage_id")
     public League getLeague() {
         return league;
     }

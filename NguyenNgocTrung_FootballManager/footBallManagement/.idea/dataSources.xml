@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="FootballDatabase@localhost" uuid="f207c8f7-55ee-4944-9f0c-5129506b6f26">
+    <data-source source="LOCAL" name="FootballDatabase@localhost" uuid="d2363a87-7219-4e7b-9d06-7958cb1f5a6d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/FootballDatabase</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="2a30257b-5528-4551-8039-595a21199034">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/FootballDatabase</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="dataSource" uuid="556ebc6c-c79e-4d3f-b01c-51ec7ddf7dfb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost/FootballDatabase</jdbc-url>
     </data-source>
   </component>
 </project>

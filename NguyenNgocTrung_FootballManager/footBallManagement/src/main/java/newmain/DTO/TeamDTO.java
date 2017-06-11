@@ -1,6 +1,6 @@
 package newmain.DTO;
 
-import newmain.DTO.LeagueDTO;
+import newmain.Model.League;
 import newmain.Model.Team;
 
 /**
@@ -20,18 +20,18 @@ public class TeamDTO {
         public TeamDTO() {
         }
 
-        public TeamDTO(int id, String name, int numberOfWin, int numberOfLost, int numberOfDraw, int score, String logo, LeagueDTO league) {
-            this.id = id;
-            this.name = name;
-            this.numberOfWin = numberOfWin;
-            this.numberOfLost = numberOfLost;
-            this.numberOfDraw = numberOfDraw;
-            this.score = score;
-            this.logo = logo;
-            this.league = league;
-        }
 
-    public TeamDTO(TeamDTO teamDTO) {
+    public TeamDTO(Team team) {
+        League leagueModel = team.getLeague();
+        LeagueDTO leagueDTO = new LeagueDTO(leagueModel);
+        this.id = team.getId();
+        this.name = team.getName();
+        this.numberOfWin = team.getNumberOfWin();
+        this.numberOfLost = team.getNumberOfLost();
+        this.numberOfDraw = team.getNumberOfDraw();
+        this.score = team.getScore();
+        this.logo = team.getLogo();
+        this.league = leagueDTO;
     }
 
 

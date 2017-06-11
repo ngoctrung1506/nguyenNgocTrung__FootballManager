@@ -36,14 +36,17 @@
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
 	<beans:bean id="hibernate4AnnotatedSessionFactory"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
 
 		<beans:property name="annotatedClasses">
 			<beans:list>
 				<beans:value>newmain.Model.Team</beans:value>
-				<beans:value>newmain.Model.Person</beans:value>
 				<beans:value>newmain.Model.League</beans:value>
+				<beans:value>newmain.Model.Match</beans:value>
+				<beans:value>newmain.Model.Player_match</beans:value>
+				<beans:value>newmain.Model.Player</beans:value>
+				<beans:value>newmain.Model.Goal_scored</beans:value>
 			</beans:list>
 		</beans:property>
 
@@ -51,7 +54,9 @@
 			<beans:props>
 				<beans:prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect
 				</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
 			</beans:props>
+
 		</beans:property>
 	</beans:bean>
 	
@@ -59,11 +64,28 @@
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 
-	<beans:bean id="teamService" class="newmain.Service.impl.TeamServiceImpl">
+	<beans:bean id="teamService" class="newmain.Service.Impl.TeamServiceImpl">
 		<beans:property name="teamDAO" ref="teamDAO"></beans:property>
 	</beans:bean>
+
+	<beans:bean id="leagueDAO" class="newmain.Dao.Impl.LeagueImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="leagueService" class="newmain.Service.Impl.LeagueServiceImpl">
+		<beans:property name="leagueDAO" ref="leagueDAO"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="playerDAO" class="newmain.Dao.Impl.PlayerImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+
+	<beans:bean id="playerService" class="newmain.Service.Impl.PlayerServiceImpl">
+		<beans:property name="playerDAO" ref="playerDAO"></beans:property>
+	</beans:bean>
+
 	<context:component-scan base-package="newmain" />
-	
+
 	<!--suppress RequiredBeanTypeInspection -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	

@@ -1,7 +1,5 @@
 package newmain.Model;
 
-import newmain.Model.*;
-
 import javax.persistence.*;
 import java.util.Date;
 
